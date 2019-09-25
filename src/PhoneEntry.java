@@ -13,11 +13,9 @@ class PhoneEntry
 
     @Override
     public String toString() {
-        return "PhoneEntry{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
+        return firstName +
+                " " + lastName +
+                " " + phone;
     }
 
     public String getFirstName() {

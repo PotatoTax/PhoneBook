@@ -1,6 +1,3 @@
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
-import javax.lang.model.type.ArrayType;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -61,7 +58,7 @@ class PhoneBook {
         System.out.print("First Name : ");
         Scanner scanner = new Scanner(System.in);
         String firstName = scanner.nextLine();
-        System.out.print("First Name : ");
+        System.out.print("Last Name : ");
         String lastName = scanner.nextLine();
         System.out.println("Phone Number in format (000)000-0000 : ");
         String phoneNumber = scanner.nextLine();
@@ -70,11 +67,38 @@ class PhoneBook {
         System.out.println("Entry Added :\n" + phoneBook.get(phoneBook.size()-1));
     }
 
+    private void DeleteEntry() {
+        System.out.println("DELETING USER");
+        System.out.print("First Name : ");
+        Scanner scanner = new Scanner(System.in);
+        String firstName = scanner.nextLine();
+        System.out.print("First Name : ");
+        String lastName = scanner.nextLine();
+
+        for (PhoneEntry p : phoneBook) {
+            if (p.getFirstName().equalsIgnoreCase(firstName)) {
+                if (p.getLastName().equalsIgnoreCase(lastName)) {
+                    phoneBook.remove(p);
+                    break;
+                }
+            }
+        }
+    }
+
+    private void SaveToFile() {
+throws IOException {
+            String str = "Hello";
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+            writer.write(str);
+
+            writer.close();
+    }
+
     private void MainLoop()
     {
         while (true)
         {
-            System.out.println("\n(1) Search for an entry\n(2) Add an entry\n(3) Delete an entry\n(4) Display all names\n(5) Save to file");
+            System.out.println("\n(1) Search for an entry\n(2) Add an entry\n(3) Delete an entry\n(4) Display all names\n(5) Save to file\n(6) Quit");
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
             switch (choice) {
@@ -84,8 +108,25 @@ class PhoneBook {
                 case 2:
                     AddEntry();
                     break;
+                case 3:
+                    DeleteEntry();
+                    break;
+                case 4:
+                    System.out.println(this);
+                    break;
+                case 6:
+                    System.exit(1);
             }
         }
+    }
+
+    @Override
+    public java.lang.String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (PhoneEntry p : phoneBook) {
+            stringBuilder.append(p.toString()).append("\n");
+        }
+        return stringBuilder.toString();
     }
 
     public static void main(String[] args) {
