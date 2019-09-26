@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -84,15 +87,16 @@ class PhoneBook {
             }
         }
     }
-
-    private void SaveToFile() {
-throws IOException {
+/*
+    private void SaveToFile()
+        throws IOException {
             String str = "Hello";
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
             writer.write(str);
 
             writer.close();
-    }
+        }
+    }*/
 
     private void MainLoop()
     {
