@@ -119,7 +119,7 @@ public class PhoneBookGui {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Phone Book");
         frame.setPreferredSize(new Dimension(600, 400));
         frame.setContentPane(new PhoneBookGui().rootPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
