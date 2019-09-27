@@ -1,7 +1,6 @@
 import com.github.javafaker.Faker;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 class PhoneBook {
     private ArrayList<PhoneEntry> phoneBook;    //declare an array
@@ -13,9 +12,9 @@ class PhoneBook {
         String lastName;
         String phoneNumber;
 
-        Faker faker = new Faker(new Locale("en-US"));
+        Faker faker = new Faker();
 
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 500000; i++) {
             firstName = faker.name().firstName();
             lastName = faker.name().lastName();
             phoneNumber = faker.numerify("(###)###-####");

@@ -22,6 +22,7 @@ public class PhoneBookGui {
     private JTextField lastNameSearchField;
 
     private JTable entryTable;
+    private JButton saveButton;
 
     private PhoneBookGui() {
         phoneBook = new PhoneBook();
