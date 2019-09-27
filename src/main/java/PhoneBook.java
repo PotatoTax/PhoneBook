@@ -31,13 +31,4 @@ class PhoneBook {
     ArrayList<PhoneEntry> getPhoneBook() {
         return phoneBook;
     }
-
-    @Override
-    public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (PhoneEntry p : phoneBook) {
-            stringBuilder.append(p.toString()).append("\n");
-        }
-        return stringBuilder.toString();
-    }
 }

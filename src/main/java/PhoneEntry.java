@@ -11,34 +11,15 @@ class PhoneEntry
         phone = PhoneNumber;
     }
 
-    @Override
-    public String toString() {
-        return firstName +
-                " " + lastName +
-                " " + phone;
-    }
-
-    public String getFirstName() {
+    String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
+    String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPhone() {
+    String getPhone() {
         return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 }

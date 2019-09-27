@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -9,26 +8,28 @@ public class PhoneBookGui {
     private PhoneBook phoneBook;
 
     private JPanel rootPanel;
+
     private JTabbedPane tabbedPane1;
-    private JList<String> firstNameList;
+
     private JButton refreshButton;
+    private JButton enterButton;
+    private JButton enterButton2;
+
     private JTextField firstNameField;
     private JTextField lastNameField;
     private JTextField phoneNumberField;
-    private JButton enterButton;
+    private JTextField firstNameDeleteField;
+    private JTextField lastNameDeleteField;
+    private JTextField firstNameSearchField;
+    private JTextField lastNameSearchField;
+
     private JLabel firstNameLabel;
     private JLabel lastNameLabel;
     private JLabel phoneNumberLabel;
-    private JTextField firstNameDeleteField;
-    private JTextField lastNameDeleteField;
     private JLabel firstNameLabel2;
     private JLabel lastNameLabel2;
-    private JButton enterButton2;
-    private JTextField firstNameSearchField;
-    private JTextField lastNameSearchField;
+
     private JTable entryTable;
-    private JList phoneNumberList;
-    private JList lastNameList;
 
     private PhoneBookGui() {
         phoneBook = new PhoneBook();
