@@ -9,8 +9,6 @@ public class PhoneBookGui {
 
     private JPanel rootPanel;
 
-    private JTabbedPane tabbedPane1;
-
     private JButton refreshButton;
     private JButton enterButton;
     private JButton enterButton2;
@@ -22,12 +20,6 @@ public class PhoneBookGui {
     private JTextField lastNameDeleteField;
     private JTextField firstNameSearchField;
     private JTextField lastNameSearchField;
-
-    private JLabel firstNameLabel;
-    private JLabel lastNameLabel;
-    private JLabel phoneNumberLabel;
-    private JLabel firstNameLabel2;
-    private JLabel lastNameLabel2;
 
     private JTable entryTable;
 
