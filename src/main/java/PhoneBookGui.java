@@ -35,9 +35,12 @@ public class PhoneBookGui {
                 AddEntry();
             } else if (e.getSource() == enterButton2) {
                 DeleteEntry();
+            } else if (e.getSource() == saveButton) {
+                phoneBook.SaveToFile();
             }
         };
 
+        saveButton.addActionListener(actionListener);
         refreshButton.addActionListener(actionListener);
         enterButton.addActionListener(actionListener);
         enterButton2.addActionListener(actionListener);

@@ -22,4 +22,13 @@ class PhoneEntry
     String getPhone() {
         return phone;
     }
+
+    @Override
+    public String toString() {
+        return "PhoneEntry{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }
